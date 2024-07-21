@@ -55,7 +55,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       })
   }, [router.query.stripe])
 
-  const typebotId = router.query.typebotId?.toString()
+  const typebotId = 'clyphuv9g0007q5gsnlk07vq0'
 
   return (
     <TolgeeProvider tolgee={ssrTolgee}>

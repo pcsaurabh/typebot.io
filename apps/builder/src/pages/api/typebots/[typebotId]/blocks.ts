@@ -17,6 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       where: canReadTypebots(typebotId, user),
       select: { groups: true },
     })
+    console.log({ typebot })
     if (!typebot) return notFound(res)
     return res.send({ groups: typebot.groups })
   }

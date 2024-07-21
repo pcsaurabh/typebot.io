@@ -220,6 +220,7 @@ export const TypebotProvider = ({
 
   const saveTypebot = useCallback(
     async (updates?: Partial<TypebotV6>) => {
+      console.log({ updates, localTypebot })
       if (!localTypebot || !typebot || isReadOnly) return
       const typebotToSave = {
         ...localTypebot,
