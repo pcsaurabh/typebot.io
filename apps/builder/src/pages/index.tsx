@@ -1,6 +1,6 @@
 import { GetServerSidePropsContext } from 'next'
-import { getServerSession } from 'next-auth'
-import { getAuthOptions } from './api/auth/[...nextauth]'
+// import { getServerSession } from 'next-auth'
+// import { getAuthOptions } from './api/auth/[...nextauth]'
 
 // export default function Page() {
 //   return null
