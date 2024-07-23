@@ -204,11 +204,11 @@ export const PublishButton = ({
           colorScheme="blue"
           isLoading={isPublishing || isUnpublishing}
           isDisabled={isPublished || isSavingLoading}
-          onClick={() => {
-            publishedTypebot && publishedTypebotVersion !== typebot?.version
-              ? onNewEngineWarningOpen()
-              : handlePublishClick()
-          }}
+          // onClick={() => {
+          //   publishedTypebot && publishedTypebotVersion !== typebot?.version
+          //     ? onNewEngineWarningOpen()
+          //     : handlePublishClick()
+          // }}
           borderRightRadius={
             publishedTypebot && !isMoreMenuDisabled ? 0 : undefined
           }

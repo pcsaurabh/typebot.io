@@ -275,9 +275,9 @@ const RightElements = ({
         typebotId={typebot?.id}
         isResultsDisplayed={isResultsDisplayed}
       />
-      <Flex pos="relative">
+      {/* <Flex pos="relative">
         <ShareTypebotButton isLoading={isNotDefined(typebot)} />
-      </Flex>
+      </Flex> */}
       {router.pathname.includes('/edit') &&
         rightPanel !== RightPanel.PREVIEW && (
           <Button
@@ -331,7 +331,7 @@ const TypebotNav = ({
       >
         {t('editor.header.flowButton.label')}
       </Button>
-      <Button
+      {/* <Button
         as={Link}
         href={`/typebots/${typebotId}/theme`}
         colorScheme={router.pathname.endsWith('theme') ? 'blue' : 'gray'}
@@ -357,7 +357,7 @@ const TypebotNav = ({
         size="sm"
       >
         {t('share.button.label')}
-      </Button>
+      </Button> */}
       {isResultsDisplayed && (
         <Button
           as={Link}

@@ -55,26 +55,27 @@ const App = ({ Component, pageProps }: AppProps) => {
       })
   }, [router.query.stripe])
 
-  const typebotId = router.query.typebotId?.toString()
+  // const typebotId = router.query.typebotId?.toString()
+  const typebotId = 'clywmiow00001mu6pyyo2if97'
 
   return (
     <TolgeeProvider tolgee={ssrTolgee}>
       <ToastContainer />
       <ChakraProvider theme={customTheme}>
         <Toaster />
-        <SessionProvider session={pageProps.session}>
-          <UserProvider>
-            <TypebotProvider typebotId={typebotId}>
-              <WorkspaceProvider typebotId={typebotId}>
-                <Component {...pageProps} />
-                {!router.pathname.endsWith('edit') && isCloudProdInstance() && (
-                  <SupportBubble />
-                )}
-                <NewVersionPopup />
-              </WorkspaceProvider>
-            </TypebotProvider>
-          </UserProvider>
-        </SessionProvider>
+        {/* <SessionProvider session={pageProps.session}> */}
+        {/* <UserProvider> */}
+        <TypebotProvider typebotId={typebotId}>
+          {/* <WorkspaceProvider typebotId={typebotId}> */}
+          <Component {...pageProps} />
+          {!router.pathname.endsWith('edit') && isCloudProdInstance() && (
+            <SupportBubble />
+          )}
+          <NewVersionPopup />
+          {/* </WorkspaceProvider> */}
+        </TypebotProvider>
+        {/* </UserProvider> */}
+        {/* </SessionProvider> */}
       </ChakraProvider>
     </TolgeeProvider>
   )
